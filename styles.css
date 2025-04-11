@@ -1,107 +1,86 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background: #0f0f0f;
-  color: #ffffff;
+  color: #e5e5e5;
   overflow-x: hidden;
 }
 
-header.hero {
-  background: linear-gradient(135deg, #ff6a00, #00d4ff);
-  padding: 5rem 2rem;
+header {
   text-align: center;
-  color: #fff;
+  padding: 50px 20px;
+  background: linear-gradient(45deg, #00f0ff, #ff6600);
+  color: #0f0f0f;
 }
 
-.header-content h1 {
-  font-size: 3rem;
+header h1 {
+  font-size: 3em;
   margin: 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
-.header-content p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+header p {
+  font-size: 1.2em;
+  margin: 10px 0;
 }
 
 .buttons {
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 
 .buttons a {
-  display: inline-block;
-  margin: 0 1rem;
-  padding: 0.75rem 1.5rem;
-  background: #111;
-  border: 2px solid #00d4ff;
-  color: #00d4ff;
+  background-color: #0f0f0f;
+  color: #fff;
   text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  transition: background 0.3s;
 }
 
 .buttons a:hover {
-  background: #00d4ff;
-  color: #111;
+  background: #333;
 }
 
 section {
-  padding: 4rem 2rem;
-  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ff6a00;
+section h2, section h3 {
+  color: #00f0ff;
 }
 
-section ul {
-  list-style: none;
-  padding: 0;
-  font-size: 1.1rem;
-}
-
-section ul li {
-  margin-bottom: 0.75rem;
-}
-
-.gallery .images {
+.carousel {
   display: flex;
-  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  overflow-x: auto;
+  padding: 10px;
 }
 
-.gallery img {
-  width: 300px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+.carousel img {
+  height: 300px;
+  border-radius: 15px;
   transition: transform 0.3s ease-in-out;
 }
 
-.gallery img:hover {
+.carousel img:hover {
   transform: scale(1.05);
 }
 
 footer {
-  padding: 2rem;
-  background: #111;
-  color: #888;
   text-align: center;
-  font-size: 0.9rem;
+  padding: 20px;
+  background: #111;
+  color: #666;
 }
 
+/* Fade-in Scroll Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: all 0.8s ease-out;
 }
 
 .fade-in.appear {

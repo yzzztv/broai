@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+header.hero {
+  background: linear-gradient(135deg, #ff6a00, #00d4ff);
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  margin-top: 2rem;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #111;
+  border: 2px solid #00d4ff;
+  color: #00d4ff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons a:hover {
+  background: #00d4ff;
+  color: #111;
+}
+
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff6a00;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.gallery .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  padding: 2rem;
+  background: #111;
+  color: #888;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}

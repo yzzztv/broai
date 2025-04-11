@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bro Ai - Meme Buddy on Base</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="header-content">
+      <h1>Bro Ai</h1>
+      <p>Your new AI-powered meme buddy living on the Base network</p>
+      <div class="buttons">
+        <a href="https://x.com/_broai" target="_blank">Twitter</a>
+        <a href="https://dexscreener.com/base/" target="_blank">Dexscreener</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="info fade-in">
+    <h2>Token Details</h2>
+    <ul>
+      <li><strong>Name:</strong> Bro Ai</li>
+      <li><strong>Ticker:</strong> $BROAI</li>
+      <li><strong>Chain:</strong> Base</li>
+      <li><strong>Contract:</strong> To be revealed soon</li>
+    </ul>
+  </section>
+
+  <section class="gallery fade-in">
+    <h2>The Bro Himself</h2>
+    <div class="images">
+      <img src="img1.png" alt="BroAi Pose 1">
+      <img src="img2.png" alt="BroAi Pose 2">
+      <img src="img3.png" alt="BroAi Pose 3">
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <p>Built by degens, for degens. Powered by AI. Running on Base.</p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.3,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>

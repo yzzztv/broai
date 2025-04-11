@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bro Ai - Meme Buddy on Base</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>BroAi - Your Meme AI on Base</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="header-content">
-      <h1>Bro Ai</h1>
-      <p>Your new AI-powered meme buddy living on the Base network</p>
-      <div class="buttons">
-        <a href="https://x.com/_broai" target="_blank">Twitter</a>
-        <a href="https://dexscreener.com/base/" target="_blank">Dexscreener</a>
-      </div>
+  <header class="fade-in">
+    <h1>BroAi</h1>
+    <p>Your new AI-powered meme buddy living on the Base network</p>
+    <div class="buttons">
+      <a href="https://x.com/_broai" target="_blank">Twitter</a>
+      <a href="https://dexscreener.com/base/" target="_blank">DexScreener</a>
     </div>
   </header>
 
-  <section class="info fade-in">
-    <h2>Token Details</h2>
+  <section class="intro fade-in">
+    <h2>What is BroAi?</h2>
+    <p>
+      BroAi is not just another memecoin — it’s an AI-infused, culture-driven, meme-powered digital being built on the Base chain.
+      It learns from trends, speaks like a bro, and vibes like no other bot.
+    </p>
+  </section>
+
+  <section class="details fade-in">
+    <h3>Token Info</h3>
     <ul>
-      <li><strong>Name:</strong> Bro Ai</li>
       <li><strong>Ticker:</strong> $BROAI</li>
       <li><strong>Chain:</strong> Base</li>
       <li><strong>Contract:</strong> To be revealed soon</li>
     </ul>
   </section>
 
-  <section class="gallery fade-in">
-    <h2>The Bro Himself</h2>
-    <div class="images">
+  <section class="quotes fade-in">
+    <h3>Did you know?</h3>
+    <p>AI doesn’t understand — it predicts. Every word is a best guess.</p>
+    <p>Base is Coinbase’s silent entry to mainstream memecoins.</p>
+    <p>BroAi lives in the wild west of the Base chain — fueled by memes, run by AI.</p>
+    <p>The future isn’t AI replacing you. It’s AI amplifying you — with style.</p>
+  </section>
+
+  <section class="carousel-section fade-in">
+    <h3>Meet BroAi</h3>
+    <div class="carousel">
       <img src="img1.png" alt="BroAi Pose 1">
       <img src="img2.png" alt="BroAi Pose 2">
       <img src="img3.png" alt="BroAi Pose 3">
@@ -38,17 +50,13 @@
   </section>
 
   <footer class="fade-in">
-    <p>Built by degens, for degens. Powered by AI. Running on Base.</p>
+    <p>&copy; 2025 BroAi. Powered by memes & machines.</p>
   </footer>
 
   <script>
+    // Scroll fade-in effect
     const faders = document.querySelectorAll('.fade-in');
-
-    const appearOptions = {
-      threshold: 0.3,
-      rootMargin: "0px 0px -50px 0px"
-    };
-
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
@@ -56,10 +64,7 @@
         observer.unobserve(entry.target);
       });
     }, appearOptions);
-
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
+    faders.forEach(fader => appearOnScroll.observe(fader));
   </script>
 </body>
 </html>
